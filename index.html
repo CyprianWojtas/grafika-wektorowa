@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Grafika wektorowa</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="jscolor.js"></script>
+	</head>
+	<body>
+		<canvas></canvas>
+		<h1>Grafika wektorowa</h1>
+		<div class="ustawienia">
+			<h2>Ustawienia</h2>
+			<div class="elementy"></div>
+			<button onclick="krzywaDodaj()">Dodaj krzywą</button>
+			<div class="ustawienia-opcje">
+				<label>Kolor tła: <input class="jscolor tloKolor"></label>
+				<label>Nieprzezroczystość tła: <input type="range" class="tloNieprz" min="0" max="255"></label>
+				<hr>
+				<label>Kolor linii: <input class="jscolor liniaKolor"></label>
+				<label>Nieprzezroczystość linii: <input type="range" class="liniaNieprz" min="0" max="255"></label>
+				<label>Grubość linii: <input type="number" class="liniaGrubosc" min="1" max="255"></label>
+				<!--<label>Styl linii: <input type="range" class="liniaStyl"></label>-->
+				<hr>
+				<label>Krzywa zamknięta: <input type="checkbox" class="krzywaZamknieta"></label>
+				<button onclick="krzywaUsunPunkt()">Usuń ostatni punkt</button>
+				<button onclick="krzywaDuplikuj()">Duplikuj objekt</button>
+				<button onclick="generujDoDruku()">Pobierz obraz</button>
+				<hr>
+				<label>Obraz tła: <input type="text" placeholder="Url..." class="tloObraz"></label>
+				<hr>
+				<h3>Skróty klawiszowe</h3>
+				<table>
+					<tr>
+						<td>Shift + Kółko myszy</td>
+						<td>Skalowanie</td>
+					</tr>
+					<tr>
+						<td>Shift + Przesuwanie LPM</td>
+						<td>Przesuwanie</td>
+					</tr>
+					<tr>
+						<td>Ctrl + LPM</td>
+						<td>Dodawanie nowego punktu</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="rysowanie.js"></script>
+		<script src="krzywe.js"></script>
+		<script src="js.js"></script>
+	</body>
+</html>
